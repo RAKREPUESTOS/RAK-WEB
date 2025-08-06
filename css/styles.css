@@ -1,0 +1,221 @@
+/* css/styles.css */
+
+/* Define la fuente personalizada para todo el body */
+body {
+    font-family: "Space Grotesk", "Noto Sans", sans-serif;
+}
+
+/* Estilos de fondo para la sección principal/hero */
+.hero-section-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/RAK LOGO EN GRANDE.png");
+}
+
+/* Estilos de fondo para las imágenes de productos (sustituye las URLs de placeholder) */
+.product-filter-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/0.jpg");
+}
+
+.product-lubricants-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/9.jpg");
+}
+
+.product-front-axle-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/2.jpg");
+}
+
+.product-brakes-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/3.jpg");
+}
+
+.product-impact-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/8.jpg");
+}
+
+.product-lights-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/7.jpg");
+}
+
+.product-starters-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/4.jpg");
+}
+
+.product-accessories-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/5.jpg");
+}
+
+.product-batteries-image {
+    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/10.jpg");
+}
+
+/* Estilos para los logos de las marcas */
+.logo-bosch {
+    background-image: url("./imagenes/Logos/Bosch_logo_PNG2.png");
+}
+
+.logo-mann {
+    background-image: url("./imagenes/Logos/mann.png");
+}
+
+.logo-dolz {
+    background-image: url("./imagenes/dolz35001000.webp");
+    /* Nota: esta imagen no está en la subcarpeta 'Logos' en tu ejemplo, ajusta si es así */
+}
+
+.logo-fremax {
+    background-image: url("./imagenes/Logos/fremax baja.jpg");
+}
+
+.logo-ralux {
+    background-image: url("./imagenes/Logos/ralux logo.png");
+}
+
+.logo-denso {
+    background-image: url("./imagenes/Logos/Denso_logo_PNG1.png");
+}
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    /* Esto lo fija en la pantalla, independientemente del scroll */
+    width: 60px;
+    /* Ancho del botón */
+    height: 60px;
+    /* Alto del botón */
+    bottom: 40px;
+    /* Distancia desde la parte inferior de la pantalla */
+    right: 40px;
+    /* Distancia desde la parte derecha de la pantalla */
+    background-color: #e2e2e2;
+    /* Color de fondo de WhatsApp */
+    color: #FFF;
+    /* Color del ícono (si fuera texto) */
+    border-radius: 50px;
+    /* Hace que el botón sea circular */
+    text-align: center;
+    /* Centra el contenido (la imagen) */
+    font-size: 30px;
+    /* Tamaño del ícono si fuera un texto */
+    box-shadow: 2px 2px 3px #999;
+    /* Sombra sutil para darle profundidad */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    /* Para centrar la imagen dentro */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+}
+
+.whatsapp-float img {
+    width: 60px;
+    /* Tamaño de la imagen del logo dentro del botón */
+    height: 55px;
+    /* Altura de la imagen */
+    vertical-align: middle;
+    /* Alineación vertical de la imagen */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    /* Efecto al pasar el mouse: agranda un poco el botón */
+    transition: all 0.3s ease;
+    /* Suaviza la transición del efecto */
+}
+
+/* Opcional: Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Estilos para el carrusel de marcas */
+.carousel-container {
+    /* Ya tiene overflow-hidden y relative en el HTML con Tailwind */
+}
+
+.carousel-track {
+    /* Ya tiene flex, transition-transform y duration-500 ease-in-out en el HTML con Tailwind */
+    /* Asegúrate de que tenga suficiente ancho para todos los items */
+    /* Este ancho será manejado por el JS para el scroll infinito */
+}
+
+.carousel-item {
+    /* Asegúrate de que el ancho sea el adecuado para cuántos logos quieres ver a la vez */
+    /* Por ejemplo, para 6 logos visibles: width: calc(100% / 6); */
+    /* Si en móviles quieres menos, usa media queries */
+}
+
+/* Para responsividad del carrusel (ajusta el número de logos visibles por pantalla) */
+@media (max-width: 639px) {
+
+    /* sm breakpoint en Tailwind es 640px */
+    .carousel-item {
+        width: calc(100% / 2);
+        /* Mostrar 2 logos en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+
+    /* sm a md breakpoints */
+    .carousel-item {
+        width: calc(100% / 3);
+        /* Mostrar 3 logos en pantallas sm */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* md a lg breakpoints */
+    .carousel-item {
+        width: calc(100% / 4);
+        /* Mostrar 4 logos en pantallas md */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg y xl breakpoints */
+    .carousel-item {
+        width: calc(100% / 6);
+        /* Mostrar 6 logos en pantallas lg y xl */
+    }
+}
+
+/* Asegúrate de que las imágenes de los logos dentro de carousel-item no tengan margen inferior si no quieres espacio debajo */
+.carousel-item img {
+    margin-bottom: 0;
+    /* Si había un mt-2 en el p, el p lo quitamos */
+}
+
+/* Ajuste para el texto descriptivo de los logos, si no lo usas, puedes quitarlo */
+.carousel-item p {
+    /* Si los párrafos están vacíos, como antes, elimínalos del HTML */
+    /* Si pones texto, ajusta el estilo aquí */
+}
+
+
+
+header {
+    background-color: #d4d4d4;
+   
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
