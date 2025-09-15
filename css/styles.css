@@ -1,130 +1,247 @@
-/* css/styles.css */
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
-/* Define la fuente personalizada para todo el body */
 body {
     font-family: "Space Grotesk", "Noto Sans", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Estilos de fondo para la sección principal/hero */
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+    background-color: #d6d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    transition: background-color 0.3s ease;
+}
+
+header a {
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
 .hero-section-bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/RAK LOGO EN GRANDE.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Estilos de fondo para las imágenes de productos (sustituye las URLs de placeholder) */
-.product-filter-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/0.jpg");
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+section h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+/*textos descriptivos */
+p {
+    font-size: 1.5rem;
+}
+/* ==========================================================================
+   Services & About Us
+   ========================================================================== */
+
+.bg-white.rounded-lg.shadow-md {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-lubricants-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/9.jpg");
+.bg-white.rounded-lg.shadow-md:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.product-front-axle-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/2.jpg");
+/* ==========================================================================
+   Products
+   ========================================================================== */
+
+.product-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-brakes-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/3.jpg");
+.product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.product-impact-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/8.jpg");
+/* Nota: Las imágenes de productos ahora se aplican directamente en el HTML con la etiqueta <img>.
+   Las clases CSS `product-*-image` ya no son necesarias. */
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+
+form input,
+form textarea {
+    transition: border-color 0.3s ease;
 }
 
-.product-lights-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/7.jpg");
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #111418;
+    box-shadow: 0 0 0 2px rgba(17, 20, 24, 0.2);
 }
 
-.product-starters-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/4.jpg");
+form button[type="submit"] {
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.product-accessories-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/5.jpg");
+form button[type="submit"]:hover {
+    background-color: #333;
 }
 
-.product-batteries-image {
-    background-image: url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/NUESTROS PRODUCTOS/10.jpg");
+form button[type="submit"]:active {
+    transform: scale(0.98);
 }
 
-/* Estilos para los logos de las marcas */
-.logo-bosch {
-    background-image: url("./imagenes/Logos/Bosch_logo_PNG2.png");
+/* ==========================================================================
+   Carousel (Brands)
+   ========================================================================== */
+
+/* Se mantiene la configuración del carrusel con el JavaScript existente.
+   El HTML con Tailwind maneja las propiedades básicas como `flex`, `overflow-hidden`, etc.
+   Las media queries a continuación manejan la responsividad de los items. */
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
 }
 
-.logo-mann {
-    background-image: url("./imagenes/Logos/mann.png");
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.logo-dolz {
-    background-image: url("./imagenes/dolz35001000.webp");
-    /* Nota: esta imagen no está en la subcarpeta 'Logos' en tu ejemplo, ajusta si es así */
+.carousel-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    /* p-2 en Tailwind */
 }
 
-.logo-fremax {
-    background-image: url("./imagenes/Logos/fremax baja.jpg");
+/* Responsividad del carrusel */
+@media (max-width: 639px) {
+    .carousel-item {
+        width: calc(100% / 2);
+    }
 }
 
-.logo-ralux {
-    background-image: url("./imagenes/Logos/ralux logo.png");
+@media (min-width: 640px) and (max-width: 767px) {
+    .carousel-item {
+        width: calc(100% / 3);
+    }
 }
 
-.logo-denso {
-    background-image: url("./imagenes/Logos/Denso_logo_PNG1.png");
+@media (min-width: 768px) and (max-width: 1023px) {
+    .carousel-item {
+        width: calc(100% / 4);
+    }
 }
-/* Estilos para el botón flotante de WhatsApp */
+
+@media (min-width: 1024px) {
+    .carousel-item {
+        width: calc(100% / 6);
+    }
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 4rem;
+    /* h-16 en Tailwind */
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   Float Buttons
+   ========================================================================== */
+
 .whatsapp-float {
     position: fixed;
-    /* Esto lo fija en la pantalla, independientemente del scroll */
     width: 60px;
-    /* Ancho del botón */
     height: 60px;
-    /* Alto del botón */
     bottom: 40px;
-    /* Distancia desde la parte inferior de la pantalla */
     right: 40px;
-    /* Distancia desde la parte derecha de la pantalla */
-    background-color: #e2e2e2;
-    /* Color de fondo de WhatsApp */
+    background-color: #25d366;
     color: #FFF;
-    /* Color del ícono (si fuera texto) */
     border-radius: 50px;
-    /* Hace que el botón sea circular */
     text-align: center;
-    /* Centra el contenido (la imagen) */
-    font-size: 30px;
-    /* Tamaño del ícono si fuera un texto */
+    z-index: 100;
     box-shadow: 2px 2px 3px #999;
-    /* Sombra sutil para darle profundidad */
-    z-index: 1000;
-    /* Asegura que esté por encima de otros elementos */
-    display: flex;
-    /* Para centrar la imagen dentro */
-    justify-content: center;
-    /* Centrado horizontal */
-    align-items: center;
-    /* Centrado vertical */
-    text-decoration: none;
-    /* Quita el subrayado del enlace */
+    transition: transform 0.3s ease;
 }
 
 .whatsapp-float img {
-    width: 60px;
-    /* Tamaño de la imagen del logo dentro del botón */
-    height: 55px;
-    /* Altura de la imagen */
-    vertical-align: middle;
-    /* Alineación vertical de la imagen */
+    width: 70px;
+    height: 65px;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    /* Efecto al pasar el mouse: agranda un poco el botón */
-    transition: all 0.3s ease;
-    /* Suaviza la transición del efecto */
 }
 
-/* Opcional: Para pantallas más pequeñas */
+.instagram-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 110px;
+    /* Esto posiciona el botón a la izquierda de WhatsApp */
+    background-color: #E1306C;
+    /* El color de Instagram */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 2px 2px 3px #999;
+    transition: transform 0.3s ease;
+}
+
+.instagram-float img {
+    width: 70px;
+    height: 65px;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 10rem;
+    right: 3rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+    background-color: #111418;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#scroll-to-top:hover {
+    transform: translateY(-5px);
+}
+
+#scroll-to-top.opacity-100 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Media query para los botones en móviles */
 @media (max-width: 768px) {
     .whatsapp-float {
         width: 50px;
@@ -137,85 +254,20 @@ body {
         width: 40px;
         height: 40px;
     }
-}
 
+    .instagram-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 80px;
+        /* Ajuste para móviles */
+    }
 
-/* Estilos para el carrusel de marcas */
-.carousel-container {
-    /* Ya tiene overflow-hidden y relative en el HTML con Tailwind */
-}
-
-.carousel-track {
-    /* Ya tiene flex, transition-transform y duration-500 ease-in-out en el HTML con Tailwind */
-    /* Asegúrate de que tenga suficiente ancho para todos los items */
-    /* Este ancho será manejado por el JS para el scroll infinito */
-}
-
-.carousel-item {
-    /* Asegúrate de que el ancho sea el adecuado para cuántos logos quieres ver a la vez */
-    /* Por ejemplo, para 6 logos visibles: width: calc(100% / 6); */
-    /* Si en móviles quieres menos, usa media queries */
-}
-
-/* Para responsividad del carrusel (ajusta el número de logos visibles por pantalla) */
-@media (max-width: 639px) {
-
-    /* sm breakpoint en Tailwind es 640px */
-    .carousel-item {
-        width: calc(100% / 2);
-        /* Mostrar 2 logos en pantallas pequeñas */
+    .instagram-float img {
+        width: 40px;
+        height: 40px;
     }
 }
-
-@media (min-width: 640px) and (max-width: 767px) {
-
-    /* sm a md breakpoints */
-    .carousel-item {
-        width: calc(100% / 3);
-        /* Mostrar 3 logos en pantallas sm */
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    /* md a lg breakpoints */
-    .carousel-item {
-        width: calc(100% / 4);
-        /* Mostrar 4 logos en pantallas md */
-    }
-}
-
-@media (min-width: 1024px) {
-
-    /* lg y xl breakpoints */
-    .carousel-item {
-        width: calc(100% / 6);
-        /* Mostrar 6 logos en pantallas lg y xl */
-    }
-}
-
-/* Asegúrate de que las imágenes de los logos dentro de carousel-item no tengan margen inferior si no quieres espacio debajo */
-.carousel-item img {
-    margin-bottom: 0;
-    /* Si había un mt-2 en el p, el p lo quitamos */
-}
-
-/* Ajuste para el texto descriptivo de los logos, si no lo usas, puedes quitarlo */
-.carousel-item p {
-    /* Si los párrafos están vacíos, como antes, elimínalos del HTML */
-    /* Si pones texto, ajusta el estilo aquí */
-}
-
-
-
-header {
-    background-color: #d4d4d4;
-   
-}
-
-
-html {
-    scroll-behavior: smooth;
 }
 
 
