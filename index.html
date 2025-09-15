@@ -1,485 +1,451 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
-    />
-
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700" />
     <title>Rak Repuestos</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <link rel="stylesheet" href="./css/styles.css"> 
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply scroll-smooth overflow-x-hidden;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 2.1rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        @layer components {
+            .hero-section-bg {
+                /* Asegúrate de que esta ruta sea correcta y relativa a tu archivo HTML */
+                background-image: url("imagenes/RAK LOGO EN GRANDE.png");
+            }
+            .whatsapp-float {
+                position: fixed;
+                width: 75px;
+                height: 75px;
+                bottom: 40px;
+                right: 40px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease-in-out;
+            }
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+            .whatsapp-float:hover {
+                transform: scale(1.1);
+            }
+            .instagram-float {
+                position: fixed;
+                width: 75px;
+                height: 75px;
+                bottom: 40px;
+                right: 125px; /* Ajuste para separar los botones */
+                background-color: #e6b7c6;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease-in-out;
+            }
+            .instagram-float img {
+                width: 40px;
+                height: 40px;
+            }
+            .instagram-float:hover {
+                transform: scale(1.1);
+            }
+        }
+    </style>
 </head>
-<body class="scroll-smooth overflow-x-hidden">
+
+<body>
+    <a id="top" class="absolute top-0"></a>
+
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root">
         <div class="layout-container flex h-full grow flex-col">
-            <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#d4d4d4] px-10 py-3 bg-[#d4d4d4]">
-                <div class="flex items-center gap-8">
-                    <div class="flex items-center gap-4 text-[#111418]">
-                        <img src="C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/engranaje.jpg" alt="Rak repuestos Logo" class="max-h-16 w-auto"/>
-                        <h2 class="text-[#111418] text-2xl font-bold leading-tight tracking-[-0.015em]">Rak Repuestos</h2>
+            <header class="sticky top-0 z-50 bg-[#E6E6E6] shadow-md">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <img src="imagenes/engranaje3.png" alt="Rak Repuestos Logo" class="h-10 w-auto" />
+                        <a href="#top" class="text-gray-900 text-xl font-bold tracking-tight">Rak Repuestos</a>
                     </div>
-                    <div class="flex items-center gap-10"> 					 
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="#servicios">Servicios</a>
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="#nosotros">Nosotros</a>
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="#contacto">Contacto</a>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+                            href="#servicios">Servicios</a>
+                        <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+                            href="#nosotros">Nosotros</a>
+                        <a class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+                            href="#contacto">Contacto</a>
+                    </nav>
+                    <div class="flex items-center">
+                        <a href="RAK REPUESTOS CATALOGO.pdf\RAK REPUESTOS CATALOGO.pdf.pdf" target="_blank"
+                            class="px-5 py-2 bg-blue-900 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-200 shadow-md">
+                            Nuestro Catálogo
+                        </a>
                     </div>
                 </div>
-                <div class="flex flex-1 justify-end gap-8">
-                    </div>
             </header>
-            <div class="px-40 flex flex-1 justify-center py-0">
-                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="px-20 flex flex-1 justify-center py-0">
+                <div class="layout-content-container flex flex-col max-w-6xl flex-1">
                     <div class="@container">
                         <div class="@[480px]:p-4">
                             <div
-                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 hero-section-bg"
-                            >
-                            
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 hero-section-bg">
                             </div>
                         </div>
                     </div>
 
-                                                 
 
-                    <section id="servicios" class="pt-28 px-4 pb-10">
-    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-8">Nuestros Servicios</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 class="text-[#111418] text-lg font-bold mb-2">Asesoramiento Personalizado</h3>
-            <p class="text-[#637488] text-sm">Nuestro equipo de expertos te brindará el mejor asesoramiento para que encuentres los repuestos exactos que tu vehículo necesita. ¡Tu satisfacción es nuestra prioridad!</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 class="text-[#111418] text-lg font-bold mb-2">Entrega a Domicilio</h3>
-            <p class="text-[#637488] text-sm">Ofrecemos un servicio de entrega rápido y seguro directamente a tu domicilio o taller. Recibe tus repuestos sin complicaciones y a tiempo.</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 class="text-[#111418] text-lg font-bold mb-2">Garantía de Calidad</h3>
-            <p class="text-[#637488] text-sm">Todos nuestros productos cuentan con garantía. Trabajamos solo con proveedores de confianza para asegurar la máxima calidad y rendimiento de cada repuesto.</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
-            <h3 class="text-[#111418] text-lg font-bold mb-2">Atención Postventa</h3>
-            <p class="text-[#637488] text-sm">Te acompañamos después de tu compra. Nuestro servicio de atención postventa está disponible para resolver cualquier duda o inconveniente que puedas tener.</p>
-        </div>
-    </div>
-</section>
-                                                                 
-
-                   
-                    <section id="nuestros-productos" class="pt-28 pb-10 px-4">
-                        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-8">Nuestros Productos</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <section id="servicios" class="pt-10 px-4 pb-10">
+                        <h2 class="text-[#111418] font-bold leading-tight tracking-[-0.015em] pb-8">Nuestros Servicios
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\0.jpg" alt="Filtros de aire, aceite, combustible y habitáculo."
+                                class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
+                                <h3 class="text-[#111418] font-bold mb-2">Asesoramiento Personalizado</h3>
+                                <p class="text-[#637488] font-normal leading-normal text-[1rem]">Nuestro equipo de
+                                    expertos te brindará el mejor
+                                    asesoramiento para que encuentres los repuestos exactos que tu vehículo necesita.
+                                    ¡Tu
+                                    satisfacción es nuestra prioridad!</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
+                                <h3 class="text-[#111418] font-bold mb-2">Entrega a Domicilio</h3>
+                                <p class="text-[#637488] font-normal leading-normal text-[1rem]">Ofrecemos un servicio
+                                    de entrega rápido y seguro
+                                    directamente a tu domicilio o taller. Recibe tus repuestos sin complicaciones y a
+                                    tiempo.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
+                                <h3 class="text-[#111418] font-bold mb-2">Garantía de Calidad</h3>
+                                <p class="text-[#637488] font-normal leading-normal text-[1rem]">Todos nuestros
+                                    productos cuentan con garantía.
+                                    Trabajamos solo con proveedores de confianza para asegurar la máxima calidad y
+                                    rendimiento de cada repuesto.</p>
+                            </div>
+                            <div
+                                class="bg-white rounded-lg shadow-md p-6 transition-transform hover:scale-105 hover:shadow-lg">
+                                <h3 class="text-[#111418] font-bold mb-2">Atención Postventa</h3>
+                                <p class="text-[#637488] font-normal leading-normal text-[1rem]">Te acompañamos
+                                    después de tu compra. Nuestro
+                                    servicio
+                                    de atención postventa está disponible para resolver cualquier duda o inconveniente
+                                    que puedas tener.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section id="nuestros-productos" class="pt-28 pb-10 px-4">
+                        <h2 class="text-[#111418] font-bold text-3xl leading-tight tracking-[-0.015em] pb-8">Nuestros
+                            Productos</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/7.png"
+                                    alt="Filtros de aire, aceite, combustible y habitáculo."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Filtros</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Filtros de aire, aceite, combustible y
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Filtros</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Filtros de aire,
+                                        aceite, combustible y
                                         habitáculo.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\9.jpg" alt="Aceites para motor, transmisión y líquidos de frenos."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/1.png"
+                                    alt="Aceites para motor, transmisión y líquidos de frenos."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Lubricantes y Aceites</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Aceites para motor, transmisión y líquidos
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Lubricantes y Aceites</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Aceites para motor,
+                                        transmisión y líquidos
                                         de frenos.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\2.jpg" alt="Amortiguadores, rótulas, extremos y bujes."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/2.png"
+                                    alt="Amortiguadores, rótulas, extremos y bujes."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Tren Delantero</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Amortiguadores, rótulas, extremos y bujes.
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Tren Delantero y dirección</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Amortiguadores,
+                                        rótulas, extremos y bujes.
                                     </p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\3.jpg" alt="Discos, pastillas, cilindros y bombas de freno."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/3.png"
+                                    alt="Discos, pastillas, cilindros y bombas de freno."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Frenos</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Discos, pastillas, cilindros y bombas de
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Frenos</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Discos, pastillas,
+                                        cilindros y bombas de
                                         freno.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\8.jpg" alt="Paragolpes, guardabarros y elementos de carrocería."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/8.jpg"
+                                    alt="Paragolpes, guardabarros y elementos de carrocería."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Impacto</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Paragolpes, guardabarros y elementos de
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Carrocería</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Paragolpes,
+                                        guardabarros y elementos de
                                         carrocería.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\7.jpg" alt="Faros, focos, fusibles y cableado."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/4.png" alt="Faros, focos, fusibles y cableado."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Luces y Electricidad</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Faros, focos, fusibles y cableado.</p>
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Encendido y electricidad</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Faros, focos, fusibles
+                                        y cableado.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\4.jpg" alt="Motores de arranque, alternadores y reguladores."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/6.png"
+                                    alt="Motores de arranque, alternadores y reguladores."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Arranques y Alternadores</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Motores de arranque, alternadores y
-                                        reguladores.</p>
-                                </div>
-                            </div>
-                            <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\5.jpg" alt="Accesorios interiores, exteriores y de confort."
-                                    class="w-full rounded-lg aspect-square object-cover">
-                                <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Accesorios</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Accesorios interiores, exteriores y de
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Accesorios</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Accesorios interiores,
+                                        exteriores y de
                                         confort.</p>
                                 </div>
                             </div>
                             <div
-                                class="flex h-full flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
-                                <img src="C:\Users\Rak repuestos\Documents\Pagina web\PROYECTO 2\imagenes\NUESTROS PRODUCTOS\10.jpg" alt="Baterías de alta durabilidad para todo tipo de vehículos."
+                                class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg">
+                                <img src="imagenes/Nuestros porductos/9.jpg" alt="Repuestos de motor de alta calidad."
                                     class="w-full rounded-lg aspect-square object-cover">
                                 <div>
-                                    <p class="text-[#111418] text-base font-medium leading-normal">Baterías</p>
-                                    <p class="text-[#637488] text-sm font-normal leading-normal">Baterías de alta durabilidad para todo tipo
-                                        de vehículos.</p>
+                                    <h3
+                                        class="text-[#111418] text-lg font-bold leading-normal whitespace-nowrap overflow-hidden text-ellipsis mb-1">
+                                        Repuestos de motor</h3>
+                                    <p class="text-[#637488] font-normal text-sm leading-normal">Repuestos de motor de
+                                        alta calidad para el
+                                        máximo rendimiento de tu vehículo.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
-
-                                                
-                                               
-
-                   
-
-                    
-
-                    
-                        <section id="nosotros" class="pt-28 pb-10 px-4">
-                            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-8">Sobre Nosotros</h2>
-                            <div class="bg-white rounded-lg shadow-md p-6">
-                                <p class="text-[#111418] text-base mb-4">
-                                    En Rak Repuestos, somos una empresa especializada en la venta de repuestos y accesorios para todo tipo de vehículos,
-                                    tanto livianos como pesados. Contamos con años de experiencia y formación, lo que respalda nuestro compromiso con la
-                                    calidad, el servicio y la atención personalizada.
-                                    
-                                    Si bien atendemos al consumidor final, nuestro principal enfoque está en brindar soluciones ágiles y eficientes a
-                                    grandes empresas que operan flotas de vehículos. Entendemos la importancia de minimizar tiempos de parada y garantizar
-                                    la continuidad operativa, por eso ofrecemos un servicio pensado para las exigencias del sector corporativo.
-                                    
-                                    
-                                </p>
-                                <p class="text-[#111418] text-base">
-                                    Ofrecemos una amplia gama de productos de las mejores marcas, precios competitivos y una experiencia de compra fácil,
-                                    rápida y confiable.
-                                    
-                                    ¡Tu flota y tu vehículo particular merecen lo mejor, y en Rak Repuestos lo encontrás!
-                                </p>
-                            </div>
-                        </section>
-                                               
-
-                    <section id="ubicacion" class="py-0 px-4">
-                        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Nuestra Ubicación</h2>
+                    <section id="nosotros" class="pt-28 pb-10 px-4">
+                        <h2 class="text-[#111418] font-bold leading-tight tracking-[-0.015em] pb-8">Sobre Nosotros</h2>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <p class="text_desc_servicios text-[1rem] mb-4">
+                                En Rak Repuestos, somos una empresa especializada en la venta de repuestos y accesorios
+                                para todo tipo de vehículos, tanto livianos como pesados. Contamos con años de
+                                experiencia y formación, lo que respalda nuestro compromiso con la calidad, el servicio
+                                y
+                                la atención personalizada.
+                            </p>
+                            <p class="text-[#111418] text-[1rem] mb-4">
+                                Si bien atendemos al consumidor final, nuestro principal enfoque está en brindar
+                                soluciones ágiles y eficientes a grandes empresas que operan flotas de vehículos.
+                                Entendemos la importancia de minimizar tiempos de parada y garantizar la continuidad
+                                operativa, por eso ofrecemos un servicio pensado para las exigencias del sector
+                                corporativo.
+                            </p>
+                            <p class="text-[#111418] text-[1rem]">
+                                Ofrecemos una amplia gama de productos de las mejores marcas, precios competitivos y una
+                                experiencia de compra fácil, rápida y confiable.
+                            </p>
+                            <p class="text-[#111418] text-[1rem]">
+                                ¡Tu flota y tu vehículo particular merecen lo mejor, y en Rak Repuestos lo encontrás!
+                            </p>
+                        </div>
+                    </section>
+                    <section id="ubicacion" class="py-10 px-4">
+                        <h2 class="text-[#111418] font-bold leading-tight tracking-[-0.015em] pb-3">Nuestra Ubicación
+                        </h2>
                         <div class="bg-white rounded-lg shadow-md p-6">
                             <div class="relative w-full" style="padding-bottom: 56.25%;">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1041.5157978449952!2d-65.89833498198324!3d-28.592948039180662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94268145dbdb4cc7%3A0x32dbcf3d6c9c8c17!2sRAK%20-%20Repuestos%20-%20Pesados%20y%20Livianos!5e0!3m2!1ses-419!2sar!4v1750764617661!5m2!1ses-419!2sar"
-                                    width="100%"
-                                    height="450"
-                                    style="border:0;"
-                                    allowfullscreen=""
-                                    loading="lazy"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.6116735900453!2d-65.89893579483031!3d-28.59307575061602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94268145dbdb4cc7%3A0x32dbcf3d6c9c8c17!2sRAK%20-%20Repuestos%20-%20Pesados%20y%20Livianos!5e0!3m2!1ses-419!2sar!4v1757512318124!5m2!1ses-419!2sar"
+                                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"
-                                    class="absolute top-0 left-0 w-full h-full rounded-lg"
-                                ></iframe>
+                                    class="absolute top-0 left-0 w-full h-full rounded-lg"></iframe>
                             </div>
                         </div>
                     </section>
-                
-                       
-                    
-
-
-
-                    <section id="contacto" class="pt-24 pb-0">
-                        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Contáctanos</h2>
+                    <section id="contacto" class="pt-24 pb-10">
+                        <h2 class="text-[#111418] font-bold leading-tight tracking-[-0.015em] pb-3">Contáctanos</h2>
                         <div class="bg-white rounded-lg shadow-md p-6">
-                            <p class="text-[#111418] text-base mb-4">¿Tienes alguna pregunta o necesitas asistencia? No dudes en
-                                contactarnos a través de los siguientes medios:</p>
+                            <p class="text-[#111418] text-[1.4rem] mb-4">¿Tienes alguna pregunta o necesitas asistencia?
+                                No
+                                dudes en contactarnos a través de los siguientes medios:</p>
                             <ul class="list-disc list-inside text-[#637488] text-base mb-4">
                                 <li>Teléfono / WhatsApp: +54 9 3834 33-5231 (Lunes a Viernes, 8:00 AM - 2:00 PM)</li>
                                 <li>Email: rakrepuestos@gmail.com</li>
                                 <li>Dirección: RP N° 5, Miraflores (CP K4724), Catamarca, Argentina</li>
                             </ul>
-                            <p class="text-[#111418] text-base mb-2">También puedes enviarnos un mensaje directamente:</p>
+                            <p class="text-[#111418] text-[1.5rem] mb-2">También puedes enviarnos un mensaje
+                                directamente:
+                            </p>
                             <form action="https://formspree.io/f/xqallaod" method="POST" class="flex flex-col gap-4">
-                                <input type="text" placeholder="Tu Nombre" class="p-3 border rounded-md" name="name" required>
-                                <input type="email" placeholder="Tu Email" class="p-3 border rounded-md" name="_replyto" required>
-                                <textarea placeholder="Tu Mensaje" rows="5" class="p-3 border rounded-md" name="message" required></textarea>
-                                <button type="submit" class="bg-[#111418] text-white p-3 rounded-md">Enviar Mensaje</button>
+                                <input type="text" placeholder="Tu Nombre" class="p-3 border rounded-md" name="name"
+                                    required>
+                                <input type="email" placeholder="Tu Email" class="p-3 border rounded-md" name="_replyto"
+                                    required>
+                                <textarea placeholder="Tu Mensaje" rows="5" class="p-3 border rounded-md" name="message"
+                                    required></textarea>
+                                <button type="submit" class="bg-[#111418] text-white p-3 rounded-md">Enviar
+                                    Mensaje</button>
                             </form>
                         </div>
                     </section>
-                   
 
-
-
-                    <section id="marcas" class="py-0 px-4">
-                        
-                        <div class="bg-white rounded-lg shadow-md p-6">
-                            <div class="carousel-container overflow-hidden relative">
-                                <div class="carousel-track flex transition-transform duration-500 ease-in-out">
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/Logos/Bosch_logo_PNG2.png" alt="Logo Marca Bosch"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/Logos/mann.png" alt="Logo Marca Mann"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/LOGOS/dolz.webp" alt="Logo Marca Dolz"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/Logos/fremax baja.jpg" alt="Logo Marca Fremax"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/Logos/ralux logo.png" alt="Logo Marca Ralux"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src="./imagenes/Logos/Denso_logo_PNG1.png" alt="Logo Marca Denso"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src=".\imagenes\LOGOS\DelcoRemy_Logo_DarkBkgrd_RGB.png" alt="Logo Marca Bosch"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
-                                    <div class="carousel-item flex flex-col items-center justify-center p-2 flex-shrink-0"
-                                        style="width: calc(100% / 6);">
-                                        <img src=".\imagenes\LOGOS\total elf.png" alt="Logo Marca Mann"
-                                            class="max-w-full h-auto max-h-16 object-contain" />
-                                    </div>
+                    <section id="marcas" class="pt-24 pb-10 px-4">
+                        <div class="bg-white rounded-lg shadow-md p-8">
+                            <h2 class="text-2xl font-bold text-center mb-8 text-[#111418]">Trabajamos con las mejores
+                                marcas</h2>
+                            <div class="flex flex-wrap items-center justify-around gap-8 md:flex-nowrap">
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/Bosch_logo_PNG2.png" alt="Logo Marca Bosch"
+                                        class="max-h-32 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/mann.png" alt="Logo Marca Mann"
+                                        class="max-h-16 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/dolz.webp" alt="Logo Marca Dolz"
+                                        class="max-h-12 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/fremax prueba 2.png" alt="Logo Marca Fremax"
+                                        class="max-h-32 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/ralux logo.png" alt="Logo Marca Ralux"
+                                        class="max-h-16 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/DelcoRemy_Logo_DarkBkgrd_RGB.png"
+                                        alt="Logo Marca DelcoRemy" class="max-h-32 w-auto object-contain" />
+                                </div>
+                                <div class="flex justify-center p-2">
+                                    <img src="imagenes/LOGOS/MAHLE.png" alt="Logo Marca DelcoRemy"
+                                        class="max-h-32 w-auto object-contain" />
                                 </div>
                             </div>
-                    
                         </div>
                     </section>
-
-
-
-                
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+                <div>
+                    <a href="#" class="text-2xl font-bold">Rak Repuestos</a>
+                    <p class="mt-4 text-gray-400 text-sm">El mejor servicio para tu auto.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-300">Enlaces Rápidos</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-300">Contacto</h3>
+                    <p class="mt-4 text-gray-400">
+                        RP N° 5, Miraflores (CP K4724)Catamarca, Argentina<br>
+                        Catamarca, Argentina<br>
+                        Teléfono: (+54) 9 3834 33-5231<br>
+                        Email: rakrepuestos@gmail.com
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-300">Síguenos</h3>
+                    <div class="flex mt-4 space-x-4">
+                        <a href="https://www.instagram.com/rak.repuestos?igsh=YTN6OHF0ZGZ0aWN0"
+                            class="text-xl text-gray-400 hover:text-white" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5493834335231" class="text-xl text-gray-400 hover:text-white"
+                            target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">© 2024 Rak Repuestos. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
-    <a href="https://wa.me/5493834335231?text=Hola%2C%20quisiera%20mas%20informacion." class="whatsapp-float"
-        target="_blank">
-        <img src="C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/LOGOS/whatsapp.png">
+
+    <a href="https://wa.me/5493834335231" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+    </a>
+    <a href="https://www.instagram.com/rak.repuestos?igsh=YTN6OHF0ZGZ0aWN0" class="instagram-float" target="_blank">
+        <img src="imagenes\LOGOS\Instagram 2.png" alt="Instagram">
     </a>
 
 
-     <a href="#top" id="scroll-to-top"
-        class="fixed bottom-28 right-12 bg-[#111418] text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 z-[1001]">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
-        class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-      </svg>
-    </a>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // ... (Tu código JavaScript existente del carrusel) ...
-
-            // --- Lógica para el botón Volver Arriba ---
-            const scrollToTopButton = document.getElementById('scroll-to-top');
-
-            // Umbral de scroll: cuándo queremos que aparezca el botón
-            // Puedes ajustar este valor. Aquí, aparece cuando la página ha bajado 500px.
-            // O si quieres que aparezca a la mitad de la página, es un poco más complejo
-            // pero 500px suele ser un buen punto de partida.
-            const scrollThreshold = 500;
-
-            // Función para mostrar u ocultar el botón
-            const toggleScrollToTopButton = () => {
-                if (window.scrollY > scrollThreshold) {
-                    scrollToTopButton.classList.remove('opacity-0', 'pointer-events-none'); // Muestra el botón
-                    scrollToTopButton.classList.add('opacity-100');
-                } else {
-                    scrollToTopButton.classList.remove('opacity-100');
-                    scrollToTopButton.classList.add('opacity-0', 'pointer-events-none'); // Oculta el botón
-                }
-            };
-
-            // Escuchar el evento de scroll en la ventana
-            window.addEventListener('scroll', toggleScrollToTopButton);
-
-            // Asegurarse de que el botón esté en el estado correcto al cargar la página
-            toggleScrollToTopButton();
-
-            // Lógica para hacer scroll suave al hacer clic en el botón
-            // (Ya tienes scroll-smooth en el body, esto asegura que funcione con el href="#top")
-            scrollToTopButton.addEventListener('click', (event) => {
-                // Evita el comportamiento por defecto del enlace si `#top` no funciona como se espera
-                // En navegadores modernos con `scroll-smooth` en el `body`, no es estrictamente necesario,
-                // pero puede ser un buen fallback si quisieras controlar más el scroll.
-                // window.scrollTo({
-                //     top: 0,
-                //     behavior: 'smooth'
-                // });
-            });
-
-            // Para ocultar el botón de WhatsApp cuando el "Scroll to Top" aparece
-            // Opcional: si quieres que el botón de WhatsApp se oculte cuando aparece el de subir
-            // Esto depende de si quieres que coexistan o no. Si no lo quieres, ignora esta parte.
-            const whatsappFloatButton = document.querySelector('.whatsapp-float');
-            const updateWhatsappButtonVisibility = () => {
-                if (window.scrollY > scrollThreshold) {
-                    // Si el botón de scroll-to-top está visible, puedes ocultar el de WhatsApp
-                    // whatsappFloatButton.classList.add('opacity-0', 'pointer-events-none');
-                } else {
-                    // Si no, asegúrate de que el de WhatsApp esté visible
-                    // whatsappFloatButton.classList.remove('opacity-0', 'pointer-events-none');
-                }
-            };
-            // window.addEventListener('scroll', updateWhatsappButtonVisibility);
-            // updateWhatsappButtonVisibility();
-        });
-    </script>
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselTrack = document.querySelector('.carousel-track');
-            let carouselItems = document.querySelectorAll('.carousel-item');
-
-            const intervalTime = 3000;
-            let slideInterval;
-            let currentIndex = 0;
-
-            const getVisibleItems = () => {
-                if (window.innerWidth < 640) return 2;
-                if (window.innerWidth < 768) return 3;
-                if (window.innerWidth < 1024) return 4;
-                return 6;
-            };
-
-            // --- DUPLICACIÓN DE ÍTEMS: Aumentamos la cantidad de duplicados para más suavidad ---
-            // Necesitamos suficientes ítems duplicados para que el salto se haga "fuera de pantalla".
-            // Lo ideal es duplicar el conjunto original al menos 3 o 4 veces.
-            const originalItemCount = carouselItems.length;
-            const itemsToDuplicate = 3; // Duplicar el conjunto original tres veces para un efecto más suave
-            for (let i = 0; i < itemsToDuplicate; i++) {
-                carouselItems.forEach(item => {
-                    carouselTrack.appendChild(item.cloneNode(true));
-                });
-            }
-            carouselItems = document.querySelectorAll('.carousel-item'); // Volvemos a seleccionar todos los ítems
-            const totalItems = carouselItems.length; // Esto es ahora el total de originales + duplicados
-
-            // Lógica del carrusel
-            const updateCarousel = () => {
-                const currentVisibleItems = getVisibleItems();
-                const translateXValue = -currentIndex * (100 / currentVisibleItems);
-                carouselTrack.style.transform = `translateX(${translateXValue}%)`;
-            };
-
-            const nextSlide = () => {
-                const currentVisibleItems = getVisibleItems();
-                currentIndex++;
-
-                // Condición para "resetear" el carrusel y simular el loop infinito
-                // Esto se activa cuando el `currentIndex` supera el número de ítems originales
-                // más un margen (por ejemplo, los ítems visibles).
-                // La clave es que el salto instantáneo ocurra cuando el usuario ya está viendo
-                // una de las copias, no los originales.
-                if (currentIndex >= originalItemCount) {
-                    // Desactiva la transición temporalmente
-                    carouselTrack.style.transition = 'none';
-
-                    // Calcula el nuevo currentIndex para volver al inicio del primer set duplicado
-                    // Si currentIndex es 6 (1º duplicado), queremos que visualmente sea 0
-                    // Si currentIndex es 7 (2º duplicado), queremos que visualmente sea 1
-                    // ...
-                    // Esto lo logramos con el módulo (%) o restando originalItemCount
-                    currentIndex = currentIndex % originalItemCount; // Esto lo mantiene dentro del rango de 0 a originalItemCount-1
-
-                    const translateXValue = -currentIndex * (100 / currentVisibleItems);
-                    carouselTrack.style.transform = `translateX(${translateXValue}%)`;
-
-                    // Fuerza un reflow (redibujado) para que el navegador aplique el cambio de transform instantáneamente
-                    carouselTrack.offsetHeight;
-
-                    // Reactiva la transición para el siguiente movimiento suave
-                    carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-                }
-                // Mueve el carrusel al siguiente slide (si no se hizo un reseteo instantáneo)
-                updateCarousel();
-            };
-
-            // Iniciar el carrusel automático
-            const startCarousel = () => {
-                stopCarousel();
-                slideInterval = setInterval(nextSlide, intervalTime);
-            };
-
-            // Detener el carrusel
-            const stopCarousel = () => {
-                clearInterval(slideInterval);
-            };
-
-            // Event listener para ajustar el carrusel en redimensionamiento de ventana
-            window.addEventListener('resize', () => {
-                currentIndex = 0; // Reinicia para alinear bien al redimensionar
-                updateCarousel();
-                startCarousel();
-            });
-
-            // Iniciar el carrusel al cargar la página
-            updateCarousel();
-            startCarousel();
-
-            // Opcional: Pausar en hover
-            carouselTrack.addEventListener('mouseenter', stopCarousel);
-            carouselTrack.addEventListener('mouseleave', startCarousel);
-        });
-    </script>
-    
 </body>
-    
-    </html>
+
+</html>
