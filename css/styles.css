@@ -27,7 +27,7 @@ header a {
    ========================================================================== */
 
 .hero-section-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), url("C:/Users/Rak repuestos/Documents/Pagina web/PROYECTO 2/imagenes/RAK LOGO EN GRANDE.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), url("imagenes/RAK LOGO EN GRANDE.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
