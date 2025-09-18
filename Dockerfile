@@ -15,7 +15,9 @@ COPY . /usr/share/nginx/html
 RUN chown -R nginxuser:nginxuser /usr/share/nginx/html && \
     chown -R nginxuser:nginxuser /var/cache/nginx && \
     chown -R nginxuser:nginxuser /var/log/nginx && \
-    chown -R nginxuser:nginxuser /etc/nginx/conf.d
+    chown -R nginxuser:nginxuser /etc/nginx/conf.d && \
+    chown -R nginxuser:nginxuser /run && \
+    chown -R nginxuser:nginxuser /var/run
 
 # Remove unnecessary packages and files for smaller image
 RUN rm -rf /var/cache/apk/* && \
