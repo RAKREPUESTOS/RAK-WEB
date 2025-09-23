@@ -200,7 +200,7 @@ form button[type="submit"]:active {
 	transition: transform 0.3s ease;
 }
 
-.instagram-float img {
+.instagram-float i {
 	width: 70px;
 	height: 65px;
 }
@@ -243,7 +243,7 @@ form button[type="submit"]:active {
 		right: 20px;
 	}
 
-	.whatsapp-float img {
+	.whatsapp-float i {
 		width: 40px;
 		height: 40px;
 	}
@@ -256,7 +256,7 @@ form button[type="submit"]:active {
 		/* Ajuste para móviles */
 	}
 
-	.instagram-float img {
+	.instagram-float i {
 		width: 40px;
 		height: 40px;
 	}
