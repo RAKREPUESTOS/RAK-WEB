@@ -3,22 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://cdn.tailwindcss.com" />
 		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 		<link rel="dns-prefetch" href="https://formspree.io" />
-		<link rel="dns-prefetch" href="https://www.google.com" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
-			as="style"
-			onload="this.rel='stylesheet'"
-			href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Space+Grotesk%3Awght%40400%3B500%3B700"
 		/>
+		<style>
+			html {
+				font-family: "Noto Sans", sans-serif;
+			}
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: "Space Grotesk", serif;
+			}
+		</style>
 		<title>
 			Rak Repuestos - Repuestos y Accesorios para Vehículos | Argentina
 		</title>
@@ -30,7 +40,6 @@
 			name="keywords"
 			content="repuestos, auto partes, vehículos, Catamarca, Argentina, garantía"
 		/>
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 		<style type="text/tailwindcss">
 			@layer base {
@@ -48,10 +57,6 @@
 				}
 			}
 			@layer components {
-				.hero-section-bg {
-					/* Asegúrate de que esta ruta sea correcta y relativa a tu archivo HTML */
-					background-image: url("imagenes/RAK LOGO EN GRANDE.png");
-				}
 				.whatsapp-float {
 					position: fixed;
 					width: 75px;
@@ -104,14 +109,85 @@
 				}
 			}
 		</style>
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="/imagenes/favicon/apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="/imagenes/favicon/apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="/imagenes/favicon/apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="/imagenes/favicon/apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="/imagenes/favicon/apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="/imagenes/favicon/apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/imagenes/favicon/apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/imagenes/favicon/apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/imagenes/favicon/apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/imagenes/favicon/android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/imagenes/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="/imagenes/favicon/favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/imagenes/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/imagenes/favicon/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
 	</head>
 
 	<body>
 		<a id="top" class="absolute top-0"></a>
 
-		<div
-			class="relative flex size-full min-h-screen flex-col bg-white group/design-root"
-		>
+		<div class="relative flex size-full min-h-screen flex-col bg-white">
 			<div class="layout-container flex h-full grow flex-col">
 				<header class="sticky top-0 z-50 bg-[#E6E6E6] shadow-md">
 					<div
@@ -119,9 +195,10 @@
 					>
 						<div class="flex items-center space-x-2">
 							<img
-								src="imagenes/engranaje3.png"
+								src="imagenes/engranaje.webp"
 								alt="Rak Repuestos Logo"
 								class="h-10 w-auto"
+								loading="lazy"
 							/>
 							<a
 								href="#top"
@@ -150,23 +227,24 @@
 							<a
 								href="pdf/rak-repuestos-catalogo.pdf"
 								target="_blank"
-								class="px-5 py-2 bg-blue-900 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-200 shadow-md"
+								class="px-4 text-center py-2 bg-blue-900 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-200 shadow-md"
 							>
 								Nuestro Catálogo
 							</a>
 						</div>
 					</div>
 				</header>
-				<div class="px-20 flex flex-1 justify-center py-0">
-					<div
-						class="layout-content-container flex flex-col max-w-6xl flex-1"
-					>
-						<div class="@container">
-							<div class="@[480px]:p-4">
-								<div
-									class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 hero-section-bg"
-								></div>
-							</div>
+				<div
+					class="px-6 md:px-12 lg:px-20 flex flex-1 justify-center py-0"
+				>
+					<div class="flex flex-col max-w-6xl flex-1">
+						<div class="flex justify-center items-center h-80 mt-6">
+							<img
+								src="imagenes/rak-logo-grande.webp"
+								fetchpriority="high"
+								alt="logo rak empresa"
+								class="h-full object-cover"
+							/>
 						</div>
 
 						<section id="servicios" class="pt-10 px-4 pb-10">
@@ -732,6 +810,7 @@
 			<img
 				src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
 				alt="WhatsApp Icon"
+				loading="lazy"
 			/>
 		</a>
 		<a
@@ -739,7 +818,11 @@
 			class="instagram-float"
 			target="_blank"
 		>
-			<img src="imagenes\LOGOS\Instagram 2.png" alt="Instagram" />
+			<img
+				src="imagenes\LOGOS\Instagram 2.png"
+				alt="Instagram"
+				loading="lazy"
+			/>
 		</a>
 	</body>
 </html>
