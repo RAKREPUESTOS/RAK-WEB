@@ -1,16 +1,28 @@
 # Image tag registry.abacoon.com.ar/rak/website
 
-# Use official nginx image as base
+# Build stage
+FROM node:20-alpine AS build
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy source files
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Production stage
 FROM nginx:alpine
 
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
-# COPY default.conf /etc/nginx/conf.d/default.conf
 
-# Copy website files to nginx html directory
-COPY pdf/ /usr/share/nginx/html/pdf/
-COPY robots.txt /usr/share/nginx/html/robots.txt
-COPY sitemap.xml /usr/share/nginx/html/sitemap.xml
-COPY imagenes/ /usr/share/nginx/html/imagenes/
-COPY css/ /usr/share/nginx/html/css/
-COPY index.html /usr/share/nginx/html/index.html
+# Copy built files from build stage
+COPY --from=build /app/dist/ /usr/share/nginx/html/
