@@ -1,10 +1,25 @@
-/* ==========================================================================
-   Base
-   ========================================================================== */
+@import "tailwindcss";
 
-body {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+html {
+	font-family: "Noto Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Space Grotesk", serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.1rem;
+}
+h3 {
+	font-size: 1.5rem;
 }
 
 /* ==========================================================================
@@ -153,111 +168,4 @@ form button[type="submit"]:active {
 	max-height: 4rem;
 	/* h-16 en Tailwind */
 	object-fit: contain;
-}
-
-/* ==========================================================================
-   Float Buttons
-   ========================================================================== */
-
-.whatsapp-float {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 40px;
-	background-color: #25d366;
-	color: #fff;
-	border-radius: 50px;
-	text-align: center;
-	z-index: 100;
-	box-shadow: 2px 2px 3px #999;
-	transition: transform 0.3s ease;
-}
-
-.whatsapp-float img {
-	width: 70px;
-	height: 65px;
-}
-
-.whatsapp-float:hover {
-	transform: scale(1.1);
-}
-
-.instagram-float {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 110px;
-	/* Esto posiciona el botón a la izquierda de WhatsApp */
-	background-color: #e1306c;
-	/* El color de Instagram */
-	color: #fff;
-	border-radius: 50px;
-	text-align: center;
-	z-index: 100;
-	box-shadow: 2px 2px 3px #999;
-	transition: transform 0.3s ease;
-}
-
-.instagram-float i {
-	width: 70px;
-	height: 65px;
-}
-
-.instagram-float:hover {
-	transform: scale(1.1);
-}
-
-#scroll-to-top {
-	position: fixed;
-	bottom: 10rem;
-	right: 3rem;
-	transition: opacity 0.3s ease, transform 0.3s ease;
-	z-index: 1001;
-	background-color: #111418;
-	color: white;
-	padding: 0.75rem;
-	border-radius: 9999px;
-	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-		0 2px 4px -1px rgba(0, 0, 0, 0.06);
-	opacity: 0;
-	pointer-events: none;
-}
-
-#scroll-to-top:hover {
-	transform: translateY(-5px);
-}
-
-#scroll-to-top.opacity-100 {
-	opacity: 1;
-	pointer-events: auto;
-}
-
-/* Media query para los botones en móviles */
-@media (max-width: 768px) {
-	.whatsapp-float {
-		width: 50px;
-		height: 50px;
-		bottom: 20px;
-		right: 20px;
-	}
-
-	.whatsapp-float i {
-		width: 40px;
-		height: 40px;
-	}
-
-	.instagram-float {
-		width: 50px;
-		height: 50px;
-		bottom: 20px;
-		right: 80px;
-		/* Ajuste para móviles */
-	}
-
-	.instagram-float i {
-		width: 40px;
-		height: 40px;
-	}
 }

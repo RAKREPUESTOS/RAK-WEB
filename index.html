@@ -3,35 +3,21 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://cdn.tailwindcss.com" />
-		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-		<link rel="dns-prefetch" href="https://formspree.io" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-		/>
+
+		<title>
+			Rak Repuestos - Repuestos y Accesorios para Vehículos | Argentina
+		</title>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<style>
-			html {
-				font-family: "Noto Sans", sans-serif;
-			}
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-family: "Space Grotesk", serif;
-			}
-		</style>
-		<title>
-			Rak Repuestos - Repuestos y Accesorios para Vehículos | Argentina
-		</title>
+
+		<link rel="stylesheet" href="src/css/styles.css" />
+
+		<!-- SEO Meta Tags -->
 		<meta
 			name="description"
 			content="Rak Repuestos - Especialistas en repuestos y accesorios para vehículos livianos y pesados en Catamarca, Argentina. Garantía de calidad y atención personalizada."
@@ -69,7 +55,7 @@
 		<meta property="og:site_name" content="Rak Repuestos" />
 		<meta
 			property="og:image"
-			content="https://rakrepuestos.com.ar/imagenes/rak-logo-grande.webp"
+			content="https://rakrepuestos.com.ar/src/imagenes/rak-logo-grande.webp"
 		/>
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
@@ -91,152 +77,84 @@
 		/>
 		<meta
 			name="twitter:image"
-			content="https://rakrepuestos.com.ar/imagenes/rak-logo-grande.webp"
+			content="https://rakrepuestos.com.ar/src/imagenes/rak-logo-grande.webp"
 		/>
 		<meta
 			name="twitter:image:alt"
 			content="Rak Repuestos - Logo de la empresa"
 		/>
 
-		<script src="https://cdn.tailwindcss.com"></script>
-		<style type="text/tailwindcss">
-			@layer base {
-				body {
-					@apply scroll-smooth overflow-x-hidden;
-				}
-				h1 {
-					font-size: 3rem;
-				}
-				h2 {
-					font-size: 2.1rem;
-				}
-				h3 {
-					font-size: 1.5rem;
-				}
-			}
-			@layer components {
-				.whatsapp-float {
-					position: fixed;
-					width: 75px;
-					height: 75px;
-					bottom: 40px;
-					right: 40px;
-					background-color: #25d366;
-					color: #fff;
-					border-radius: 50px;
-					text-align: center;
-					font-size: 30px;
-					box-shadow: 2px 2px 3px #999;
-					z-index: 1000;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					transition: transform 0.3s ease-in-out;
-				}
-				.whatsapp-float img {
-					width: 40px;
-					height: 40px;
-				}
-				.whatsapp-float:hover {
-					transform: scale(1.1);
-				}
-				.instagram-float {
-					position: fixed;
-					width: 75px;
-					height: 75px;
-					bottom: 40px;
-					right: 125px; /* Ajuste para separar los botones */
-					background-color: #e6b7c6;
-					color: #fff;
-					border-radius: 50px;
-					text-align: center;
-					font-size: 30px;
-					box-shadow: 2px 2px 3px #999;
-					z-index: 1000;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					transition: transform 0.3s ease-in-out;
-				}
-				.instagram-float img {
-					width: 40px;
-					height: 40px;
-				}
-				.instagram-float:hover {
-					transform: scale(1.1);
-				}
-			}
-		</style>
+		<!-- Favicon and Touch Icons -->
 		<link
 			rel="apple-touch-icon"
 			sizes="57x57"
-			href="/imagenes/favicon/apple-icon-57x57.png"
+			href="/src/imagenes/favicon/apple-icon-57x57.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="60x60"
-			href="/imagenes/favicon/apple-icon-60x60.png"
+			href="/src/imagenes/favicon/apple-icon-60x60.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="72x72"
-			href="/imagenes/favicon/apple-icon-72x72.png"
+			href="/src/imagenes/favicon/apple-icon-72x72.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="76x76"
-			href="/imagenes/favicon/apple-icon-76x76.png"
+			href="/src/imagenes/favicon/apple-icon-76x76.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="114x114"
-			href="/imagenes/favicon/apple-icon-114x114.png"
+			href="/src/imagenes/favicon/apple-icon-114x114.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="120x120"
-			href="/imagenes/favicon/apple-icon-120x120.png"
+			href="/src/imagenes/favicon/apple-icon-120x120.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="144x144"
-			href="/imagenes/favicon/apple-icon-144x144.png"
+			href="/src/imagenes/favicon/apple-icon-144x144.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="152x152"
-			href="/imagenes/favicon/apple-icon-152x152.png"
+			href="/src/imagenes/favicon/apple-icon-152x152.png"
 		/>
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="/imagenes/favicon/apple-icon-180x180.png"
+			href="/src/imagenes/favicon/apple-icon-180x180.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="192x192"
-			href="/imagenes/favicon/android-icon-192x192.png"
+			href="/src/imagenes/favicon/android-icon-192x192.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="/imagenes/favicon/favicon-32x32.png"
+			href="/src/imagenes/favicon/favicon-32x32.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="96x96"
-			href="/imagenes/favicon/favicon-96x96.png"
+			href="/src/imagenes/favicon/favicon-96x96.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="/imagenes/favicon/favicon-16x16.png"
+			href="/src/imagenes/favicon/favicon-16x16.png"
 		/>
-		<link rel="manifest" href="/imagenes/favicon/manifest.json" />
+		<link rel="manifest" href="/src/imagenes/favicon/manifest.json" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 		<meta name="theme-color" content="#ffffff" />
@@ -249,8 +167,8 @@
 				"name": "Rak Repuestos",
 				"description": "Especialistas en repuestos y accesorios para vehículos livianos y pesados en Catamarca, Argentina. Garantía de calidad y atención personalizada.",
 				"url": "https://rakrepuestos.com.ar/",
-				"logo": "https://rakrepuestos.com.ar/imagenes/rak-logo-grande.webp",
-				"image": "https://rakrepuestos.com.ar/imagenes/rak-logo-grande.webp",
+				"logo": "https://rakrepuestos.com.ar/src/imagenes/rak-logo-grande.webp",
+				"image": "https://rakrepuestos.com.ar/src/imagenes/rak-logo-grande.webp",
 				"telephone": "+54 9 3834 33-5231",
 				"email": "rakrepuestos@gmail.com",
 				"address": {
@@ -340,7 +258,7 @@
 					>
 						<div class="flex items-center space-x-2">
 							<img
-								src="imagenes/engranaje.webp"
+								src="src/imagenes/engranaje.webp"
 								alt="Rak Repuestos Logo"
 								class="h-10 w-auto"
 								loading="lazy"
@@ -390,7 +308,7 @@
 								Argentina
 							</h1>
 							<img
-								src="imagenes/rak-logo-grande.webp"
+								src="src/imagenes/rak-logo-grande.webp"
 								fetchpriority="high"
 								alt="Rak Repuestos - Logo de la empresa especialista en repuestos y accesorios para vehículos en Catamarca, Argentina"
 								class="h-full object-cover"
@@ -485,7 +403,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/7.webp"
+										src="src/imagenes/nuestros-productos/7.webp"
 										alt="Filtros de aire, aceite, combustible y habitáculo."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -508,7 +426,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/1.webp"
+										src="src/imagenes/nuestros-productos/1.webp"
 										alt="Aceites para motor, transmisión y líquidos de frenos."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -531,7 +449,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/2.webp"
+										src="src/imagenes/nuestros-productos/2.webp"
 										alt="Amortiguadores, rótulas, extremos y bujes."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -554,7 +472,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/3.webp"
+										src="src/imagenes/nuestros-productos/3.webp"
 										alt="Discos, pastillas, cilindros y bombas de freno."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -577,7 +495,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/8.webp"
+										src="src/imagenes/nuestros-productos/8.webp"
 										alt="Paragolpes, guardabarros y elementos de carrocería."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -600,7 +518,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/4.webp"
+										src="src/imagenes/nuestros-productos/4.webp"
 										alt="Faros, focos, fusibles y cableado."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -622,7 +540,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/6.webp"
+										src="src/imagenes/nuestros-productos/6.webp"
 										alt="Motores de arranque, alternadores y reguladores."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -645,7 +563,7 @@
 									class="flex flex-col gap-4 rounded-lg p-4 transition-transform hover:scale-105 shadow-md hover:shadow-lg"
 								>
 									<img
-										src="imagenes/nuestros-productos/9.webp"
+										src="src/imagenes/nuestros-productos/9.webp"
 										alt="Repuestos de motor de alta calidad."
 										class="w-full rounded-lg aspect-square object-cover"
 										loading="lazy"
@@ -807,7 +725,7 @@
 								>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/Bosch_logo_PNG2.png"
+											src="src/imagenes/LOGOS/Bosch_logo_PNG2.png"
 											alt="Logo Marca Bosch"
 											class="max-h-32 w-auto object-contain"
 											loading="lazy"
@@ -815,7 +733,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/mann.png"
+											src="src/imagenes/LOGOS/mann.png"
 											alt="Logo Marca Mann"
 											class="max-h-16 w-auto object-contain"
 											loading="lazy"
@@ -823,7 +741,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/dolz.webp"
+											src="src/imagenes/LOGOS/dolz.webp"
 											alt="Logo Marca Dolz"
 											class="max-h-12 w-auto object-contain"
 											loading="lazy"
@@ -831,7 +749,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/fremax prueba 2.png"
+											src="src/imagenes/LOGOS/fremax prueba 2.png"
 											alt="Logo Marca Fremax"
 											class="max-h-32 w-auto object-contain"
 											loading="lazy"
@@ -839,7 +757,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/ralux logo.png"
+											src="src/imagenes/LOGOS/ralux logo.png"
 											alt="Logo Marca Ralux"
 											class="max-h-16 w-auto object-contain"
 											loading="lazy"
@@ -847,7 +765,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/DelcoRemy_Logo_DarkBkgrd_RGB.png"
+											src="src/imagenes/LOGOS/DelcoRemy_Logo_DarkBkgrd_RGB.png"
 											alt="Logo Marca DelcoRemy"
 											class="max-h-32 w-auto object-contain"
 											loading="lazy"
@@ -855,7 +773,7 @@
 									</div>
 									<div class="flex justify-center p-2">
 										<img
-											src="imagenes/LOGOS/MAHLE.png"
+											src="src/imagenes/LOGOS/MAHLE.png"
 											alt="Logo Marca DelcoRemy"
 											class="max-h-32 w-auto object-contain"
 											loading="lazy"
@@ -931,14 +849,14 @@
 								class="text-xl text-gray-400 hover:text-white"
 								target="_blank"
 							>
-								<i class="fab fa-instagram"></i>
+								<img alt="instagram logo" src="public/instagram-logo.svg"></img>
 							</a>
 							<a
 								href="https://wa.me/5493834335231"
 								class="text-xl text-gray-400 hover:text-white"
 								target="_blank"
 							>
-								<i class="fab fa-whatsapp"></i>
+								<img alt="whatsapp logo" src="public/whatsapp-logo.svg"></img>
 							</a>
 						</div>
 					</div>
@@ -957,14 +875,14 @@
 			class="whatsapp-float"
 			target="_blank"
 		>
-			<i class="fab fa-whatsapp"></i>
+			<img alt="whatsapp logo" src="public/whatsapp-logo.svg"></img>
 		</a>
 		<a
 			href="https://www.instagram.com/rak.repuestos?igsh=YTN6OHF0ZGZ0aWN0"
 			class="instagram-float"
 			target="_blank"
 		>
-			<i class="fab fa-instagram"></i>
+			<img alt="instagram logo" src="public/instagram-logo.svg"></img>
 		</a>
 	</body>
 </html>
